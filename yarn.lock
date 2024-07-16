@@ -1713,40 +1713,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gorhom/bottom-sheet@npm:^4.6.3":
-  version: 4.6.3
-  resolution: "@gorhom/bottom-sheet@npm:4.6.3"
-  dependencies:
-    "@gorhom/portal": 1.0.14
-    invariant: ^2.2.4
-  peerDependencies:
-    "@types/react": "*"
-    "@types/react-native": "*"
-    react: "*"
-    react-native: "*"
-    react-native-gesture-handler: ">=1.10.1"
-    react-native-reanimated: ">=2.2.0"
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-    "@types/react-native":
-      optional: true
-  checksum: 718c55a89b0e18581eae6080d1d21caabf4895088e01f0dfe17b5891835a110d7aee1d0cb1b9e623efc16b598fdb28c2ec929e0ed74bfbca283306191d8a5c41
-  languageName: node
-  linkType: hard
-
-"@gorhom/portal@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@gorhom/portal@npm:1.0.14"
-  dependencies:
-    nanoid: ^3.3.1
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: 227bb96a2db854ab29bb9da8d4f3823c7f7448358de459709dd1b78522110da564c9a8734c6bc7d7153ed7c99320e0fb5d60b420c2ebb75ecaf2f0d757f410f9
-  languageName: node
-  linkType: hard
-
 "@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -5466,52 +5432,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"halalFood@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "halalFood@workspace:."
-  dependencies:
-    "@babel/core": ^7.20.0
-    "@babel/preset-env": ^7.24.7
-    "@babel/runtime": ^7.20.0
-    "@gorhom/bottom-sheet": ^4.6.3
-    "@react-native/babel-preset": 0.74.84
-    "@react-native/eslint-config": 0.74.84
-    "@react-native/metro-config": 0.74.84
-    "@react-native/typescript-config": 0.74.84
-    "@react-navigation/bottom-tabs": ^6.5.20
-    "@react-navigation/native": ^6.1.17
-    "@react-navigation/native-stack": ^6.9.26
-    "@reduxjs/toolkit": ^2.2.5
-    "@shopify/flash-list": ^1.6.4
-    "@types/i18n-js": ^3.8.9
-    "@types/react": ^18.2.6
-    "@types/react-test-renderer": ^18.0.0
-    babel-jest: ^29.6.3
-    babel-plugin-module-resolver: ^5.0.2
-    dayjs: ^1.11.11
-    eslint: ^8.19.0
-    i18n-js: ^4.4.3
-    jest: ^29.6.3
-    prettier: 2.8.8
-    react: 18.2.0
-    react-hook-form: ^7.51.5
-    react-native: 0.74.2
-    react-native-animated-dots-carousel: ^1.0.2
-    react-native-gesture-handler: ^2.16.2
-    react-native-linear-gradient: ^2.8.3
-    react-native-localize: ^3.2.0
-    react-native-mmkv: ^2.12.2
-    react-native-onboard: ^2.6.0
-    react-native-reanimated: ^3.12.0
-    react-native-reanimated-carousel: ^3.5.1
-    react-native-safe-area-context: ^4.10.4
-    react-native-screens: ^3.31.1
-    react-redux: ^9.1.2
-    react-test-renderer: 18.2.0
-    typescript: 5.0.4
-  languageName: unknown
-  linkType: soft
-
 "has-bigints@npm:^1.0.1, has-bigints@npm:^1.0.2":
   version: 1.0.2
   resolution: "has-bigints@npm:1.0.2"
@@ -7576,7 +7496,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.23, nanoid@npm:^3.3.1":
+"muslimlife@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "muslimlife@workspace:."
+  dependencies:
+    "@babel/core": ^7.20.0
+    "@babel/preset-env": ^7.24.7
+    "@babel/runtime": ^7.20.0
+    "@react-native/babel-preset": 0.74.84
+    "@react-native/eslint-config": 0.74.84
+    "@react-native/metro-config": 0.74.84
+    "@react-native/typescript-config": 0.74.84
+    "@react-navigation/bottom-tabs": ^6.5.20
+    "@react-navigation/native": ^6.1.17
+    "@react-navigation/native-stack": ^6.9.26
+    "@reduxjs/toolkit": ^2.2.5
+    "@shopify/flash-list": ^1.6.4
+    "@types/i18n-js": ^3.8.9
+    "@types/react": ^18.2.6
+    "@types/react-test-renderer": ^18.0.0
+    babel-jest: ^29.6.3
+    babel-plugin-module-resolver: ^5.0.2
+    dayjs: ^1.11.11
+    eslint: ^8.19.0
+    i18n-js: ^4.4.3
+    jest: ^29.6.3
+    prettier: 2.8.8
+    react: 18.2.0
+    react-hook-form: ^7.51.5
+    react-native: 0.74.2
+    react-native-animated-dots-carousel: ^1.0.2
+    react-native-gesture-handler: ^2.16.2
+    react-native-keyboard-aware-scroll-view: ^0.9.5
+    react-native-linear-gradient: ^2.8.3
+    react-native-mmkv: ^2.12.2
+    react-native-reanimated: ^3.12.0
+    react-native-reanimated-carousel: ^3.5.1
+    react-native-safe-area-context: ^4.10.4
+    react-native-screens: ^3.31.1
+    react-redux: ^9.1.2
+    react-test-renderer: 18.2.0
+    typescript: 5.0.4
+  languageName: unknown
+  linkType: soft
+
+"nanoid@npm:^3.1.23":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:
@@ -8214,7 +8178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.8.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:15.8.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8356,6 +8320,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-iphone-x-helper@npm:^1.0.3":
+  version: 1.3.1
+  resolution: "react-native-iphone-x-helper@npm:1.3.1"
+  peerDependencies:
+    react-native: ">=0.42.0"
+  checksum: 024376646009a966e33e12fc2358751830818b0fb73b1c601a64eb5e490d2dc43eec23668991b985a8c412a84d087f20eb45bb9b593567c08b66e741b7bddda5
+  languageName: node
+  linkType: hard
+
+"react-native-keyboard-aware-scroll-view@npm:^0.9.5":
+  version: 0.9.5
+  resolution: "react-native-keyboard-aware-scroll-view@npm:0.9.5"
+  dependencies:
+    prop-types: ^15.6.2
+    react-native-iphone-x-helper: ^1.0.3
+  peerDependencies:
+    react-native: ">=0.48.4"
+  checksum: 5eec2aedb886213dfed4c8428a443b565dce80ba9fcf5897171e4c8829d4dd64c5011ac004d93f29adfc83ad6f88c2838d1a5b45255dc4a49bd1c0a169245800
+  languageName: node
+  linkType: hard
+
 "react-native-linear-gradient@npm:^2.8.3":
   version: 2.8.3
   resolution: "react-native-linear-gradient@npm:2.8.3"
@@ -8366,20 +8351,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-localize@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "react-native-localize@npm:3.2.0"
-  peerDependencies:
-    react: ">=18.1.0"
-    react-native: ">=0.70.0"
-    react-native-macos: ">=0.70.0"
-  peerDependenciesMeta:
-    react-native-macos:
-      optional: true
-  checksum: a7493203638535253abfab65631372cbdb064d5af4c321d2b67e7f244a2a4063b57f236e22bb3a8288c987219d9e87271116f0b5fb96824c7effd267f0f0fde7
-  languageName: node
-  linkType: hard
-
 "react-native-mmkv@npm:^2.12.2":
   version: 2.12.2
   resolution: "react-native-mmkv@npm:2.12.2"
@@ -8387,16 +8358,6 @@ __metadata:
     react: "*"
     react-native: ">=0.71.0"
   checksum: 8c79504a89fefd7f9c290a4a6bb24f1f9ef9e2a69d20d0f7d882b89f3943556e9c919c9d46583e44ab698f25213489277fccb6d4c856cce310267c5f907388f1
-  languageName: node
-  linkType: hard
-
-"react-native-onboard@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "react-native-onboard@npm:2.6.0"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: 2c8ab0f00caf6fdbc268bfad54428722fe4c71fe64e48d1e3e481867a4f7075ff3e16bc2ea764d146bf470d081c163fdd71e5d0a203e74c763d1c11f5887abc4
   languageName: node
   linkType: hard
 

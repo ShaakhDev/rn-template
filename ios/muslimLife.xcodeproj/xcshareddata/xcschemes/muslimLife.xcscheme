@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "halalFood.app"
-               BlueprintName = "halalFood"
-               ReferencedContainer = "container:halalFood.xcodeproj">
+               BuildableName = "muslimLife.app"
+               BlueprintName = "muslimLife"
+               ReferencedContainer = "container:muslimLife.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "halalFoodTests.xctest"
-               BlueprintName = "halalFoodTests"
-               ReferencedContainer = "container:halalFood.xcodeproj">
+               BuildableName = "muslimLifeTests.xctest"
+               BlueprintName = "muslimLifeTests"
+               ReferencedContainer = "container:muslimLife.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "halalFood.app"
-            BlueprintName = "halalFood"
-            ReferencedContainer = "container:halalFood.xcodeproj">
+            BuildableName = "muslimLife.app"
+            BlueprintName = "muslimLife"
+            ReferencedContainer = "container:muslimLife.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "halalFood.app"
-            BlueprintName = "halalFood"
-            ReferencedContainer = "container:halalFood.xcodeproj">
+            BuildableName = "muslimLife.app"
+            BlueprintName = "muslimLife"
+            ReferencedContainer = "container:muslimLife.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

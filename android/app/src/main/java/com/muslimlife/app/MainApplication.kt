@@ -1,4 +1,4 @@
-package com.halalfood
+package com.muslimlife.app
 
 import android.app.Application
 import com.facebook.react.PackageList

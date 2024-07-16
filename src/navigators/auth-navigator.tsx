@@ -16,15 +16,11 @@ export const AuthNavigator = () => {
     <AuthStack.Navigator
       screenOptions={{
         headerShown: false,
-        navigationBarColor: colors.palette.gradient1,
+        navigationBarColor: 'black',
       }}>
       <AuthStack.Screen name="Welcome" component={Screens.Welcome} />
       <AuthStack.Screen name="Signup" component={Screens.SignupScreen} />
       <AuthStack.Screen name="Login" component={Screens.LoginScreen} />
-      <AuthStack.Screen
-        name="ResetPassword"
-        component={Screens.ResetPasswordScreen}
-      />
     </AuthStack.Navigator>
   );
 };

@@ -1,40 +1,29 @@
 import {I18n} from 'i18n-js';
-import {getLocales} from 'react-native-localize';
-import en, {Translations} from './en';
-import ru from './ru';
+import ru, {Translations} from './ru';
 import uz from './uz';
+import {useStorage} from '@/utils';
+import {StorageKeys} from '@/constants';
 
 export const i18n = new I18n({
-  en,
   ru,
   uz,
 });
 
 // to use regional locales use { "en-US": enUS } etc
-i18n.translations = {en, ru, uz, 'en-US': en};
+i18n.translations = {
+  ru,
+  uz,
+};
 
-const fallbackLocale = 'en-US';
-const systemLocale = getLocales()[0];
-const systemLocaleTag = systemLocale?.languageTag ?? 'en-US';
-
-if (Object.prototype.hasOwnProperty.call(i18n.translations, systemLocaleTag)) {
-  // if specific locales like en-FI or en-US is available, set it
-  i18n.locale = systemLocaleTag;
-} else {
-  // otherwise try to fallback to the general locale (dropping the -XX suffix)
-  const generalLocale = systemLocaleTag.split('-')[0];
-  if (Object.prototype.hasOwnProperty.call(i18n.translations, generalLocale)) {
-    i18n.locale = generalLocale;
-  } else {
-    i18n.locale = fallbackLocale;
-  }
-}
+const savedLocale = useStorage.getItem(StorageKeys.LANGUAGE) as string;
+i18n.locale = savedLocale || 'uz'; // set your default locale here
 
 /**
  * Builds up valid keypaths for translations.
  */
 export type TxKeyPath = RecursiveKeyOf<Translations>;
 
+export type TextType = TxKeyPath | undefined;
 // via: https://stackoverflow.com/a/65333050
 type RecursiveKeyOf<TObj extends object> = {
   [TKey in keyof TObj & (string | number)]: RecursiveKeyOfHandleValue<

@@ -18,9 +18,6 @@ export const BottomTabNavigator = () => {
         headerShown: false,
       }}>
       <Tab.Screen name="Home" component={Screens.HomeScreen} />
-      <Tab.Screen name="Catalog" component={Screens.CatalogScreen} />
-      <Tab.Screen name="Cart" component={Screens.CartScreen} />
-      <Tab.Screen name="Wishlist" component={Screens.WishlistScreen} />
       <Tab.Screen name="Profile" component={Screens.ProfileScreen} />
     </Tab.Navigator>
   );

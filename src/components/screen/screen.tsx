@@ -1,8 +1,6 @@
 import {useScrollToTop} from '@react-navigation/native';
-// import { StatusBar, StatusBarProps } from "expo-status-bar"
 import React, {useRef, useState} from 'react';
 import {
-  KeyboardAvoidingView,
   KeyboardAvoidingViewProps,
   LayoutChangeEvent,
   Platform,
@@ -14,6 +12,8 @@ import {
 } from 'react-native';
 import {colors} from '@/theme';
 import {ExtendedEdge, useSafeAreaInsetsStyle} from '@/utils';
+import LinearGradient from 'react-native-linear-gradient';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 interface BaseScreenProps {
   /**
@@ -45,9 +45,10 @@ interface BaseScreenProps {
    */
   keyboardOffset?: number;
   /**
-   * Pass any additional props directly to the StatusBar component.
+   *  Gradient Wrapper for non-scrolling screen.
+   **
    */
-  //   StatusBarProps?: StatusBarProps;
+  backgroundGradient?: boolean;
   /**
    * Pass any additional props directly to the KeyboardAvoidingView component.
    */
@@ -175,8 +176,19 @@ function useAutoPreset(props: AutoScreenProps): {
  * @returns {JSX.Element} - The rendered `ScreenWithoutScrolling` component.
  */
 function ScreenWithoutScrolling(props: ScreenProps) {
-  const {style, contentContainerStyle, children} = props;
-  return (
+  const {style, contentContainerStyle, children, backgroundGradient} = props;
+
+  return backgroundGradient ? (
+    <LinearGradient
+      style={[$outerStyle, contentContainerStyle]}
+      colors={[
+        colors.palette.gradient3,
+        colors.palette.gradient2,
+        colors.palette.gradient1,
+      ]}>
+      {children}
+    </LinearGradient>
+  ) : (
     <View style={[$outerStyle, style]}>
       <View style={[$innerStyle, contentContainerStyle]}>{children}</View>
     </View>
@@ -237,11 +249,9 @@ function ScreenWithScrolling(props: ScreenProps) {
  * @param {ScreenProps} props - The props for the `Screen` component.
  * @returns {JSX.Element} The rendered `Screen` component.
  */
-export function Screen(props: ScreenProps) {
+export function Screen(props: ScreenProps): JSX.Element {
   const {
     backgroundColor = colors.background,
-    KeyboardAvoidingViewProps,
-    keyboardOffset = 0,
     safeAreaEdges,
     // StatusBarProps,
     // statusBarStyle = 'dark',
@@ -251,19 +261,20 @@ export function Screen(props: ScreenProps) {
 
   return (
     <View style={[$containerStyle, {backgroundColor}, $containerInsets]}>
-      {/* <StatusBar style={statusBarStyle} {...StatusBarProps} /> */}
-
-      <KeyboardAvoidingView
-        behavior={isIos ? 'padding' : 'height'}
-        keyboardVerticalOffset={keyboardOffset}
-        {...KeyboardAvoidingViewProps}
-        style={[$keyboardAvoidingViewStyle, KeyboardAvoidingViewProps?.style]}>
+      <KeyboardAwareScrollView
+        enableOnAndroid
+        style={$keyboardAvoidingViewStyle}
+        enableAutomaticScroll={Platform.OS === 'ios'}
+        keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="none"
+        extraScrollHeight={10}
+        showsVerticalScrollIndicator={false}>
         {isNonScrolling(props.preset) ? (
           <ScreenWithoutScrolling {...props} />
         ) : (
           <ScreenWithScrolling {...props} />
         )}
-      </KeyboardAvoidingView>
+      </KeyboardAwareScrollView>
     </View>
   );
 }
@@ -272,6 +283,7 @@ const $containerStyle: ViewStyle = {
   flex: 1,
   height: '100%',
   width: '100%',
+  backgroundColor: colors.palette.neutral100,
 };
 
 const $keyboardAvoidingViewStyle: ViewStyle = {

@@ -1,5 +1,5 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {TextStyle, View, ViewStyle} from 'react-native';
+import {View, ViewStyle} from 'react-native';
 import {Text} from '@/components';
 import {BottomTabParamsList} from 'src/navigators/tab-navigator';
 
@@ -8,7 +8,7 @@ export const HomeScreen = ({
 }: NativeStackScreenProps<BottomTabParamsList, 'Home'>) => {
   return (
     <View style={$container}>
-      <Text >Home Screen</Text>
+      <Text>Home Screen</Text>
     </View>
   );
 };
